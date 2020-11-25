@@ -1,0 +1,112 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-address-library-coordinate-heading" jhiTranslate="baiduApp.addressLibraryCoordinate.home.createOrEditLabel">Create or edit a Address Library Coordinate</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="baiduApp.addressLibraryCoordinate.addressId" for="field_addressId" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.addressId' | translate">Address Id</label>
+                    <input type="text" class="form-control" name="addressId" id="field_addressId"
+                           formControlName="addressId"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="baiduApp.addressLibraryCoordinate.areaId" for="field_areaId" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.areaId' | translate">Area Id</label>
+                    <input type="text" class="form-control" name="areaId" id="field_areaId"
+                           formControlName="areaId"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="baiduApp.addressLibraryCoordinate.code" for="field_code" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.code' | translate">Code</label>
+                    <input type="text" class="form-control" name="code" id="field_code"
+                           formControlName="code"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="baiduApp.addressLibraryCoordinate.name" for="field_name" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.name' | translate">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                           formControlName="name"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="baiduApp.addressLibraryCoordinate.zipCode" for="field_zipCode" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.zipCode' | translate">Zip Code</label>
+                    <input type="text" class="form-control" name="zipCode" id="field_zipCode"
+                           formControlName="zipCode"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="baiduApp.addressLibraryCoordinate.parentCode" for="field_parentCode" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.parentCode' | translate">Parent Code</label>
+                    <input type="text" class="form-control" name="parentCode" id="field_parentCode"
+                           formControlName="parentCode"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="baiduApp.addressLibraryCoordinate.addrLevel" for="field_addrLevel" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.addrLevel' | translate">Addr Level</label>
+                    <input type="text" class="form-control" name="addrLevel" id="field_addrLevel"
+                           formControlName="addrLevel"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="baiduApp.addressLibraryCoordinate.available" for="field_available" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.available' | translate">Available</label>
+                    <input type="number" class="form-control" name="available" id="field_available"
+                           formControlName="available"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="baiduApp.addressLibraryCoordinate.seqNo" for="field_seqNo" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.seqNo' | translate">Seq No</label>
+                    <input type="number" class="form-control" name="seqNo" id="field_seqNo"
+                           formControlName="seqNo"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="baiduApp.addressLibraryCoordinate.createTime" for="field_createTime" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.createTime' | translate">Create Time</label>
+                    <div class="d-flex">
+                        <input id="field_createTime" type="datetime-local" class="form-control" name="createTime" formControlName="createTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="baiduApp.addressLibraryCoordinate.updateTime" for="field_updateTime" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.updateTime' | translate">Update Time</label>
+                    <div class="d-flex">
+                        <input id="field_updateTime" type="datetime-local" class="form-control" name="updateTime" formControlName="updateTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="baiduApp.addressLibraryCoordinate.limitLine" for="field_limitLine" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.limitLine' | translate">Limit Line</label>
+                    <input type="number" class="form-control" name="limitLine" id="field_limitLine"
+                           formControlName="limitLine"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="baiduApp.addressLibraryCoordinate.pinyinPrefix" for="field_pinyinPrefix" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.pinyinPrefix' | translate">Pinyin Prefix</label>
+                    <input type="text" class="form-control" name="pinyinPrefix" id="field_pinyinPrefix"
+                           formControlName="pinyinPrefix"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="baiduApp.addressLibraryCoordinate.districtLatitudeLongitude" for="field_districtLatitudeLongitude" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.districtLatitudeLongitude' | translate">District Latitude Longitude</label>
+                    <input type="text" class="form-control" name="districtLatitudeLongitude" id="field_districtLatitudeLongitude"
+                           formControlName="districtLatitudeLongitude"/>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

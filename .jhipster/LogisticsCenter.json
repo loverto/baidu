@@ -1,0 +1,68 @@
+{
+  "name": "LogisticsCenter",
+  "fields": [
+    {
+      "fieldName": "regionName",
+      "fieldType": "String",
+      "javadoc": "行政区名称"
+    },
+    {
+      "fieldName": "logisticsCenterName",
+      "fieldType": "String",
+      "javadoc": "物流中心名称"
+    },
+    {
+      "fieldName": "longitude",
+      "fieldType": "String",
+      "javadoc": "经度"
+    },
+    {
+      "fieldName": "dimension",
+      "fieldType": "String",
+      "javadoc": "维度"
+    },
+    {
+      "fieldName": "creationBy",
+      "fieldType": "Integer",
+      "javadoc": "创建人"
+    },
+    {
+      "fieldName": "creationDate",
+      "fieldType": "Instant",
+      "javadoc": "创建日期"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "Integer",
+      "javadoc": "最后修改人"
+    },
+    {
+      "fieldName": "lastModifyTime",
+      "fieldType": "Instant",
+      "javadoc": "最后修改时间"
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant",
+      "javadoc": "最后修改日期"
+    },
+    {
+      "fieldName": "available",
+      "fieldType": "Integer",
+      "javadoc": "是否可用"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201124132620",
+  "javadoc": "物流中心\\n@author ylf",
+  "entityTableName": "logistics_center",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

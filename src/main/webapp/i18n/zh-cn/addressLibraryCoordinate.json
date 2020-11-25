@@ -1,0 +1,51 @@
+{
+  "baiduApp": {
+    "addressLibraryCoordinate": {
+      "home": {
+        "title": "Address Library Coordinates",
+        "createLabel": "创建新 Address Library Coordinate",
+        "createOrEditLabel": "创建或编辑 Address Library Coordinate",
+        "notFound": "No Address Library Coordinates found"
+      },
+      "created": "Address Library Coordinate {{ param }} 创建成功",
+      "updated": "Address Library Coordinate {{ param }} 更新成功",
+      "deleted": "Address Library Coordinate {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Address Library Coordinate {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Address Library Coordinate"
+      },
+      "addressId": "Address Id",
+      "areaId": "Area Id",
+      "code": "Code",
+      "name": "Name",
+      "zipCode": "Zip Code",
+      "parentCode": "Parent Code",
+      "addrLevel": "Addr Level",
+      "available": "Available",
+      "seqNo": "Seq No",
+      "createTime": "Create Time",
+      "updateTime": "Update Time",
+      "limitLine": "Limit Line",
+      "pinyinPrefix": "Pinyin Prefix",
+      "districtLatitudeLongitude": "District Latitude Longitude",
+      "help": {
+        "addressId": "地址编码",
+        "areaId": "地区编码",
+        "code": "编码",
+        "name": "名称",
+        "zipCode": "邮编",
+        "parentCode": "父级编码",
+        "addrLevel": "地址级别",
+        "available": "是否可用",
+        "seqNo": "序列号",
+        "createTime": "创建时间",
+        "updateTime": "更新时间",
+        "limitLine": "限制行号",
+        "pinyinPrefix": "拼音前缀",
+        "districtLatitudeLongitude": "区县坐标"
+      }
+    }
+  }
+}

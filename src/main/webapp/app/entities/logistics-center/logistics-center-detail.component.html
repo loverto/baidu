@@ -1,0 +1,66 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="logisticsCenter">
+            <h2><span jhiTranslate="baiduApp.logisticsCenter.detail.title">Logistics Center</span> {{ logisticsCenter.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="baiduApp.logisticsCenter.regionName" [ngbTooltip]="'baiduApp.logisticsCenter.help.regionName' | translate">Region Name</span></dt>
+                <dd>
+                    <span>{{ logisticsCenter.regionName }}</span>
+                </dd>
+                <dt><span jhiTranslate="baiduApp.logisticsCenter.logisticsCenterName" [ngbTooltip]="'baiduApp.logisticsCenter.help.logisticsCenterName' | translate">Logistics Center Name</span></dt>
+                <dd>
+                    <span>{{ logisticsCenter.logisticsCenterName }}</span>
+                </dd>
+                <dt><span jhiTranslate="baiduApp.logisticsCenter.longitude" [ngbTooltip]="'baiduApp.logisticsCenter.help.longitude' | translate">Longitude</span></dt>
+                <dd>
+                    <span>{{ logisticsCenter.longitude }}</span>
+                </dd>
+                <dt><span jhiTranslate="baiduApp.logisticsCenter.dimension" [ngbTooltip]="'baiduApp.logisticsCenter.help.dimension' | translate">Dimension</span></dt>
+                <dd>
+                    <span>{{ logisticsCenter.dimension }}</span>
+                </dd>
+                <dt><span jhiTranslate="baiduApp.logisticsCenter.creationBy" [ngbTooltip]="'baiduApp.logisticsCenter.help.creationBy' | translate">Creation By</span></dt>
+                <dd>
+                    <span>{{ logisticsCenter.creationBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="baiduApp.logisticsCenter.creationDate" [ngbTooltip]="'baiduApp.logisticsCenter.help.creationDate' | translate">Creation Date</span></dt>
+                <dd>
+                    <span>{{ logisticsCenter.creationDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="baiduApp.logisticsCenter.lastModifiedBy" [ngbTooltip]="'baiduApp.logisticsCenter.help.lastModifiedBy' | translate">Last Modified By</span></dt>
+                <dd>
+                    <span>{{ logisticsCenter.lastModifiedBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="baiduApp.logisticsCenter.lastModifyTime" [ngbTooltip]="'baiduApp.logisticsCenter.help.lastModifyTime' | translate">Last Modify Time</span></dt>
+                <dd>
+                    <span>{{ logisticsCenter.lastModifyTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="baiduApp.logisticsCenter.lastModifiedDate" [ngbTooltip]="'baiduApp.logisticsCenter.help.lastModifiedDate' | translate">Last Modified Date</span></dt>
+                <dd>
+                    <span>{{ logisticsCenter.lastModifiedDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="baiduApp.logisticsCenter.available" [ngbTooltip]="'baiduApp.logisticsCenter.help.available' | translate">Available</span></dt>
+                <dd>
+                    <span>{{ logisticsCenter.available }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/logistics-center', logisticsCenter.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

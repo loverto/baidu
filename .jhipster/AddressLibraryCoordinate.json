@@ -1,0 +1,88 @@
+{
+  "name": "AddressLibraryCoordinate",
+  "fields": [
+    {
+      "fieldName": "addressId",
+      "fieldType": "String",
+      "javadoc": "地址编码"
+    },
+    {
+      "fieldName": "areaId",
+      "fieldType": "String",
+      "javadoc": "地区编码"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "javadoc": "编码"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "javadoc": "名称"
+    },
+    {
+      "fieldName": "zipCode",
+      "fieldType": "String",
+      "javadoc": "邮编"
+    },
+    {
+      "fieldName": "parentCode",
+      "fieldType": "String",
+      "javadoc": "父级编码"
+    },
+    {
+      "fieldName": "addrLevel",
+      "fieldType": "String",
+      "javadoc": "地址级别"
+    },
+    {
+      "fieldName": "available",
+      "fieldType": "Integer",
+      "javadoc": "是否可用"
+    },
+    {
+      "fieldName": "seqNo",
+      "fieldType": "Integer",
+      "javadoc": "序列号"
+    },
+    {
+      "fieldName": "createTime",
+      "fieldType": "Instant",
+      "javadoc": "创建时间"
+    },
+    {
+      "fieldName": "updateTime",
+      "fieldType": "Instant",
+      "javadoc": "更新时间"
+    },
+    {
+      "fieldName": "limitLine",
+      "fieldType": "Integer",
+      "javadoc": "限制行号"
+    },
+    {
+      "fieldName": "pinyinPrefix",
+      "fieldType": "String",
+      "javadoc": "拼音前缀"
+    },
+    {
+      "fieldName": "districtLatitudeLongitude",
+      "fieldType": "String",
+      "javadoc": "区县坐标"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201124132720",
+  "javadoc": "带坐标的地址库\\n@author ylf",
+  "entityTableName": "address_library_coordinate",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

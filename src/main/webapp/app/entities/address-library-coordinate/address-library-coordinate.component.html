@@ -1,0 +1,97 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="baiduApp.addressLibraryCoordinate.home.title">Address Library Coordinates</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-address-library-coordinate" [routerLink]="['/address-library-coordinate/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="baiduApp.addressLibraryCoordinate.home.createLabel">
+            Create a new Address Library Coordinate
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="addressLibraryCoordinates?.length === 0">
+        <span jhiTranslate="baiduApp.addressLibraryCoordinate.home.notFound">No addressLibraryCoordinates found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="addressLibraryCoordinates && addressLibraryCoordinates.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" [callback]="loadPage.bind(this)">
+                    <th scope="col"  jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="addressId"><span jhiTranslate="baiduApp.addressLibraryCoordinate.addressId">Address Id</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="areaId"><span jhiTranslate="baiduApp.addressLibraryCoordinate.areaId">Area Id</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="code"><span jhiTranslate="baiduApp.addressLibraryCoordinate.code">Code</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="name"><span jhiTranslate="baiduApp.addressLibraryCoordinate.name">Name</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="zipCode"><span jhiTranslate="baiduApp.addressLibraryCoordinate.zipCode">Zip Code</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="parentCode"><span jhiTranslate="baiduApp.addressLibraryCoordinate.parentCode">Parent Code</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="addrLevel"><span jhiTranslate="baiduApp.addressLibraryCoordinate.addrLevel">Addr Level</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="available"><span jhiTranslate="baiduApp.addressLibraryCoordinate.available">Available</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="seqNo"><span jhiTranslate="baiduApp.addressLibraryCoordinate.seqNo">Seq No</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="createTime"><span jhiTranslate="baiduApp.addressLibraryCoordinate.createTime">Create Time</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="updateTime"><span jhiTranslate="baiduApp.addressLibraryCoordinate.updateTime">Update Time</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="limitLine"><span jhiTranslate="baiduApp.addressLibraryCoordinate.limitLine">Limit Line</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="pinyinPrefix"><span jhiTranslate="baiduApp.addressLibraryCoordinate.pinyinPrefix">Pinyin Prefix</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="districtLatitudeLongitude"><span jhiTranslate="baiduApp.addressLibraryCoordinate.districtLatitudeLongitude">District Latitude Longitude</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let addressLibraryCoordinate of addressLibraryCoordinates ;trackBy: trackId">
+                    <td><a [routerLink]="['/address-library-coordinate', addressLibraryCoordinate.id, 'view']">{{ addressLibraryCoordinate.id }}</a></td>
+                    <td>{{ addressLibraryCoordinate.addressId }}</td>
+                    <td>{{ addressLibraryCoordinate.areaId }}</td>
+                    <td>{{ addressLibraryCoordinate.code }}</td>
+                    <td>{{ addressLibraryCoordinate.name }}</td>
+                    <td>{{ addressLibraryCoordinate.zipCode }}</td>
+                    <td>{{ addressLibraryCoordinate.parentCode }}</td>
+                    <td>{{ addressLibraryCoordinate.addrLevel }}</td>
+                    <td>{{ addressLibraryCoordinate.available }}</td>
+                    <td>{{ addressLibraryCoordinate.seqNo }}</td>
+                    <td>{{ addressLibraryCoordinate.createTime | date:'medium' }}</td>
+                    <td>{{ addressLibraryCoordinate.updateTime | date:'medium' }}</td>
+                    <td>{{ addressLibraryCoordinate.limitLine }}</td>
+                    <td>{{ addressLibraryCoordinate.pinyinPrefix }}</td>
+                    <td>{{ addressLibraryCoordinate.districtLatitudeLongitude }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/address-library-coordinate', addressLibraryCoordinate.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/address-library-coordinate', addressLibraryCoordinate.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(addressLibraryCoordinate)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div *ngIf="addressLibraryCoordinates && addressLibraryCoordinates.length > 0">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="ngbPaginationPage" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage($event)"></ngb-pagination>
+        </div>
+    </div>
+</div>

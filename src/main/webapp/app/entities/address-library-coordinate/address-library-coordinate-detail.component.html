@@ -1,0 +1,82 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="addressLibraryCoordinate">
+            <h2><span jhiTranslate="baiduApp.addressLibraryCoordinate.detail.title">Address Library Coordinate</span> {{ addressLibraryCoordinate.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="baiduApp.addressLibraryCoordinate.addressId" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.addressId' | translate">Address Id</span></dt>
+                <dd>
+                    <span>{{ addressLibraryCoordinate.addressId }}</span>
+                </dd>
+                <dt><span jhiTranslate="baiduApp.addressLibraryCoordinate.areaId" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.areaId' | translate">Area Id</span></dt>
+                <dd>
+                    <span>{{ addressLibraryCoordinate.areaId }}</span>
+                </dd>
+                <dt><span jhiTranslate="baiduApp.addressLibraryCoordinate.code" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.code' | translate">Code</span></dt>
+                <dd>
+                    <span>{{ addressLibraryCoordinate.code }}</span>
+                </dd>
+                <dt><span jhiTranslate="baiduApp.addressLibraryCoordinate.name" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.name' | translate">Name</span></dt>
+                <dd>
+                    <span>{{ addressLibraryCoordinate.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="baiduApp.addressLibraryCoordinate.zipCode" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.zipCode' | translate">Zip Code</span></dt>
+                <dd>
+                    <span>{{ addressLibraryCoordinate.zipCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="baiduApp.addressLibraryCoordinate.parentCode" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.parentCode' | translate">Parent Code</span></dt>
+                <dd>
+                    <span>{{ addressLibraryCoordinate.parentCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="baiduApp.addressLibraryCoordinate.addrLevel" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.addrLevel' | translate">Addr Level</span></dt>
+                <dd>
+                    <span>{{ addressLibraryCoordinate.addrLevel }}</span>
+                </dd>
+                <dt><span jhiTranslate="baiduApp.addressLibraryCoordinate.available" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.available' | translate">Available</span></dt>
+                <dd>
+                    <span>{{ addressLibraryCoordinate.available }}</span>
+                </dd>
+                <dt><span jhiTranslate="baiduApp.addressLibraryCoordinate.seqNo" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.seqNo' | translate">Seq No</span></dt>
+                <dd>
+                    <span>{{ addressLibraryCoordinate.seqNo }}</span>
+                </dd>
+                <dt><span jhiTranslate="baiduApp.addressLibraryCoordinate.createTime" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.createTime' | translate">Create Time</span></dt>
+                <dd>
+                    <span>{{ addressLibraryCoordinate.createTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="baiduApp.addressLibraryCoordinate.updateTime" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.updateTime' | translate">Update Time</span></dt>
+                <dd>
+                    <span>{{ addressLibraryCoordinate.updateTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="baiduApp.addressLibraryCoordinate.limitLine" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.limitLine' | translate">Limit Line</span></dt>
+                <dd>
+                    <span>{{ addressLibraryCoordinate.limitLine }}</span>
+                </dd>
+                <dt><span jhiTranslate="baiduApp.addressLibraryCoordinate.pinyinPrefix" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.pinyinPrefix' | translate">Pinyin Prefix</span></dt>
+                <dd>
+                    <span>{{ addressLibraryCoordinate.pinyinPrefix }}</span>
+                </dd>
+                <dt><span jhiTranslate="baiduApp.addressLibraryCoordinate.districtLatitudeLongitude" [ngbTooltip]="'baiduApp.addressLibraryCoordinate.help.districtLatitudeLongitude' | translate">District Latitude Longitude</span></dt>
+                <dd>
+                    <span>{{ addressLibraryCoordinate.districtLatitudeLongitude }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/address-library-coordinate', addressLibraryCoordinate.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

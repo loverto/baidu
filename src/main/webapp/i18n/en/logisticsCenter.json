@@ -1,0 +1,43 @@
+{
+  "baiduApp": {
+    "logisticsCenter": {
+      "home": {
+        "title": "Logistics Centers",
+        "createLabel": "Create a new Logistics Center",
+        "createOrEditLabel": "Create or edit a Logistics Center",
+        "notFound": "No Logistics Centers found"
+      },
+      "created": "A new Logistics Center is created with identifier {{ param }}",
+      "updated": "A Logistics Center is updated with identifier {{ param }}",
+      "deleted": "A Logistics Center is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Logistics Center {{ id }}?"
+      },
+      "detail": {
+        "title": "Logistics Center"
+      },
+      "regionName": "Region Name",
+      "logisticsCenterName": "Logistics Center Name",
+      "longitude": "Longitude",
+      "dimension": "Dimension",
+      "creationBy": "Creation By",
+      "creationDate": "Creation Date",
+      "lastModifiedBy": "Last Modified By",
+      "lastModifyTime": "Last Modify Time",
+      "lastModifiedDate": "Last Modified Date",
+      "available": "Available",
+      "help": {
+        "regionName": "行政区名称",
+        "logisticsCenterName": "物流中心名称",
+        "longitude": "经度",
+        "dimension": "维度",
+        "creationBy": "创建人",
+        "creationDate": "创建日期",
+        "lastModifiedBy": "最后修改人",
+        "lastModifyTime": "最后修改时间",
+        "lastModifiedDate": "最后修改日期",
+        "available": "是否可用"
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+/**
+ * 物流中心
+ * @author ylf
+ */
+entity LogisticsCenter {
+    /** 行政区名称 */
+    regionName String,
+    /** 物流中心名称 */
+    logisticsCenterName String,
+    /** 经度 */
+    longitude String,
+    /** 维度 */
+    dimension String,
+    /** 创建人 */
+    creationBy Integer,
+    /** 创建日期 */
+    creationDate Instant,
+    /** 最后修改人 */
+    lastModifiedBy Integer,
+    /** 最后修改时间 */
+    lastModifyTime Instant,
+    /** 最后修改日期 */
+    lastModifiedDate Instant,
+    /** 是否可用 */
+    available Integer
+}
+
+/**
+ * 带坐标的地址库
+ * @author ylf
+ */
+entity AddressLibraryCoordinate {
+    /** 地址编码 */
+    addressId String,
+    /** 地区编码 */
+    areaId String ,
+    /** 编码 */
+    code String,
+    /** 名称 */
+    name String,
+    /** 邮编 */
+    zipCode String,
+    /** 父级编码 */
+    parentCode String,
+    /** 地址级别 */
+    addrLevel String ,
+    /** 是否可用 */
+    available Integer,
+    /** 序列号 */
+    seqNo Integer,
+    /** 创建时间 */
+    createTime Instant,
+    /** 更新时间 */
+    updateTime Instant,
+    /** 限制行号 */
+    limitLine Integer,
+    /** 拼音前缀 */
+    pinyinPrefix String,
+    /** 区县坐标 */
+    districtLatitudeLongitude String
+}
+
+filter *
+
+paginate * with pagination
