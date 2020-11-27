@@ -10,7 +10,7 @@ entity LogisticsCenter {
     /** 经度 */
     longitude String,
     /** 维度 */
-    dimension String,
+    latitude String,
     /** 创建人 */
     creationBy Integer,
     /** 创建日期 */
